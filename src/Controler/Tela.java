@@ -203,7 +203,7 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
 
     private void initComponents() {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("POO2023-1 - Skooter");
+        setTitle("POO2025-1 - Game(Ricardo Dias, Fernando Cirilo e Fernando Cristovao)");
         setAlwaysOnTop(true);
         setAutoRequestFocus(false);
         setResizable(false);
