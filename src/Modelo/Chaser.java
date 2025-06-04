@@ -4,18 +4,15 @@
  */
 package Modelo;
 
-import Auxiliar.Consts;
 import Auxiliar.Desenho;
 import Auxiliar.Posicao;
 import Controler.Tela;
-
-import java.io.Serializable;
 
 /**
  *
  * @author 2373891
  */
-public class Chaser extends Personagem implements Serializable {
+public class Chaser extends Personagem {
 
     private boolean iDirectionV;
     private boolean iDirectionH;

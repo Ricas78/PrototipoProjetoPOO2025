@@ -1,11 +1,8 @@
 package Modelo;
 
-import Auxiliar.Consts;
 import Auxiliar.Desenho;
-import Controler.Tela;
-import java.awt.Graphics;
 
-public class ArrowSK extends BichinhoVaiVemHorizontal {
+public class ArrowSK extends MobHorizontal {
     private int iContaIntervalos;
     private int delay;
     private boolean up;

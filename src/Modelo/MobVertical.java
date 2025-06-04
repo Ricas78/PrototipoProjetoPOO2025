@@ -4,14 +4,14 @@ package Modelo;
 import Auxiliar.Desenho;
 import Controler.Tela;
 
-public class BichinhoVaiVemVertical extends Personagem {
+public class MobVertical extends Personagem {
     private int contFrames;
     private int passosDados;
     private int totalPassos;
     private boolean invertido;
     private int delay;
 
-    public BichinhoVaiVemVertical(String sNomeImagePNG, int walk, int delay, boolean sentido) {
+    public MobVertical(String sNomeImagePNG, int walk, int delay, boolean sentido) {
         super(sNomeImagePNG);
         this.totalPassos = walk;
         this.invertido = sentido; // sentido = true (começa indo pra cima)

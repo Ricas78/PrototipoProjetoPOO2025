@@ -55,82 +55,82 @@ public class Fase1 extends Fase {
                 k5.setPosicao(25, 13);
                 addPersonagem(k5);
 
-                BichinhoVaiVemVertical b1 = new BichinhoVaiVemVertical("warriorSk.png", 1, 3,
+                MobVertical b1 = new MobVertical("warriorSk.png", 1, 3,
                                 true);
                 b1.setPosicao(0, 7);
                 addPersonagem(b1);
 
-                BichinhoVaiVemVertical b2 = new BichinhoVaiVemVertical("warriorSk.png", 2, 3,
+                MobVertical b2 = new MobVertical("warriorSk.png", 2, 3,
                                 true);
                 b2.setPosicao(5, 6);
                 addPersonagem(b2);
 
-                BichinhoVaiVemVertical b3 = new BichinhoVaiVemVertical("warriorSk.png", 2, 2,
+                MobVertical b3 = new MobVertical("warriorSk.png", 2, 2,
                                 true);
                 b3.setPosicao(5, 10);
                 addPersonagem(b3);
 
-                BichinhoVaiVemVertical b4 = new BichinhoVaiVemVertical("warriorSk.png", 2, 2,
+                MobVertical b4 = new MobVertical("warriorSk.png", 2, 2,
                                 false);
                 b4.setPosicao(3, 3);
                 addPersonagem(b4);
 
-                BichinhoVaiVemVertical b5 = new BichinhoVaiVemVertical("warriorSk.png", 1, 2,
+                MobVertical b5 = new MobVertical("warriorSk.png", 1, 2,
                                 false);
                 b5.setPosicao(22, 9);
                 addPersonagem(b5);
 
-                BichinhoVaiVemVertical b6 = new BichinhoVaiVemVertical("warriorSk.png", 1, 2,
+                MobVertical b6 = new MobVertical("warriorSk.png", 1, 2,
                                 false);
                 b6.setPosicao(22, 7);
                 addPersonagem(b6);
 
-                BichinhoVaiVemVertical b7 = new BichinhoVaiVemVertical("warriorSk.png", 1, 2,
+                MobVertical b7 = new MobVertical("warriorSk.png", 1, 2,
                                 true);
                 b7.setPosicao(23, 5);
                 addPersonagem(b7);
 
-                BichinhoVaiVemVertical b8 = new BichinhoVaiVemVertical("warriorSk.png", 1, 2,
+                MobVertical b8 = new MobVertical("warriorSk.png", 1, 2,
                                 true);
                 b8.setPosicao(26, 11);
                 addPersonagem(b8);
 
-                BichinhoVaiVemHorizontal bh1 = new BichinhoVaiVemHorizontal("slime.png", 1, 2,
+                MobHorizontal bh1 = new MobHorizontal("slime.png", 1, 2,
                                 true);
                 bh1.setPosicao(9, 0);
                 addPersonagem(bh1);
 
-                BichinhoVaiVemHorizontal bh2 = new BichinhoVaiVemHorizontal("slime.png", 1, 2,
+                MobHorizontal bh2 = new MobHorizontal("slime.png", 1, 2,
                                 true);
                 bh2.setPosicao(15, 1);
                 addPersonagem(bh2);
 
-                BichinhoVaiVemHorizontal bh3 = new BichinhoVaiVemHorizontal("slime.png", 1, 2,
+                MobHorizontal bh3 = new MobHorizontal("slime.png", 1, 2,
                                 false);
                 bh3.setPosicao(18, 3);
                 addPersonagem(bh3);
 
-                BichinhoVaiVemHorizontal bh4 = new BichinhoVaiVemHorizontal("slime.png", 1, 2,
+                MobHorizontal bh4 = new MobHorizontal("slime.png", 1, 2,
                                 false);
                 bh4.setPosicao(12, 3);
                 addPersonagem(bh4);
 
-                BichinhoVaiVemHorizontal bh5 = new BichinhoVaiVemHorizontal("slime.png", 1, 2,
+                MobHorizontal bh5 = new MobHorizontal("slime.png", 1, 2,
                                 false);
                 bh5.setPosicao(15, 6);
                 addPersonagem(bh5);
 
-                BichinhoVaiVemHorizontal bh6 = new BichinhoVaiVemHorizontal("slime.png", 2, 2,
+                MobHorizontal bh6 = new MobHorizontal("slime.png", 2, 2,
                                 false);
                 bh6.setPosicao(11, 12);
                 addPersonagem(bh6);
 
-                BichinhoVaiVemHorizontal bh7 = new BichinhoVaiVemHorizontal("slime.png", 2, 1,
+                MobHorizontal bh7 = new MobHorizontal("slime.png", 2, 1,
                                 false);
                 bh7.setPosicao(13, 12);
                 addPersonagem(bh7);
 
-                BichinhoVaiVemHorizontal bh8 = new BichinhoVaiVemHorizontal("slime.png", 2, 2,
+                MobHorizontal bh8 = new MobHorizontal("slime.png", 2, 2,
                                 true);
                 bh8.setPosicao(15, 14);
                 addPersonagem(bh8);

@@ -7,7 +7,7 @@ public class Fase3 extends Fase {
                 wallpaper = "dungeon.png";
 
                 hero = new Hero("MainHero.png");
-                hero.setPosicao(0, 1);
+                hero.setPosicao(0, 0);
                 addPersonagem(hero);
 
                 wallHori(2, 0, 0, "dg.png");
@@ -81,37 +81,37 @@ public class Fase3 extends Fase {
                 a3.setPosicao(20, 7);
                 addPersonagem(a3);
 
-                BichinhoVaiVemVertical b1 = new BichinhoVaiVemVertical("warriorSk.png", 1, 3,
+                MobVertical b1 = new MobVertical("warriorSk.png", 1, 3,
                                 false);
                 b1.setPosicao(22, 7);
                 addPersonagem(b1);
 
-                BichinhoVaiVemVertical b2 = new BichinhoVaiVemVertical("warriorSk.png", 1, 3,
+                MobVertical b2 = new MobVertical("warriorSk.png", 1, 3,
                                 true);
                 b2.setPosicao(23, 9);
                 addPersonagem(b2);
 
-                BichinhoVaiVemVertical b3 = new BichinhoVaiVemVertical("warriorSk.png", 1, 3,
+                MobVertical b3 = new MobVertical("warriorSk.png", 1, 3,
                                 true);
                 b3.setPosicao(26, 4);
                 addPersonagem(b3);
 
-                BichinhoVaiVemVertical b4 = new BichinhoVaiVemVertical("warriorSk.png", 1, 3,
+                MobVertical b4 = new MobVertical("warriorSk.png", 1, 3,
                                 false);
                 b4.setPosicao(25, 6);
                 addPersonagem(b4);
 
-                BichinhoVaiVemVertical b5 = new BichinhoVaiVemVertical("warriorSk.png", 1, 5,
+                MobVertical b5 = new MobVertical("warriorSk.png", 1, 5,
                                 false);
                 b5.setPosicao(28, 2);
                 addPersonagem(b5);
 
-                BichinhoVaiVemVertical b6 = new BichinhoVaiVemVertical("warriorSk.png", 1, 4,
+                MobVertical b6 = new MobVertical("warriorSk.png", 1, 4,
                                 true);
                 b6.setPosicao(29, 3);
                 addPersonagem(b6);
 
-                BichinhoVaiVemVertical b7 = new BichinhoVaiVemVertical("warriorSk.png", 1, 5,
+                MobVertical b7 = new MobVertical("warriorSk.png", 1, 5,
                                 false);
                 b7.setPosicao(28, 4);
                 addPersonagem(b7);

@@ -13,7 +13,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class BichinhoVaiVemHorizontal extends Personagem implements Serializable {
+public class MobHorizontal extends Personagem implements Serializable {
 
     private int contFrames;
     private int passosDados;
@@ -21,7 +21,7 @@ public class BichinhoVaiVemHorizontal extends Personagem implements Serializable
     private boolean invertido;
     private int delay;
 
-    public BichinhoVaiVemHorizontal(String sNomeImagePNG, int walk, int delay, boolean sentido) {
+    public MobHorizontal(String sNomeImagePNG, int walk, int delay, boolean sentido) {
         super(sNomeImagePNG);
         this.totalPassos = walk;
         this.invertido = sentido; // sentido = true (começa indo pra esquerda)

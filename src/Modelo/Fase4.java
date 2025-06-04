@@ -107,27 +107,27 @@ public class Fase4 extends Fase {
         a5.setPosicao(29, 15);
         addPersonagem(a5);
 
-        BichinhoVaiVemVertical b1 = new BichinhoVaiVemVertical("warriorSk.png", 1, 3,
+        MobVertical b1 = new MobVertical("warriorSk.png", 1, 3,
                 true);
         b1.setPosicao(1, 9);
         addPersonagem(b1);
 
-        BichinhoVaiVemVertical b2 = new BichinhoVaiVemVertical("warriorSk.png", 1, 3,
+        MobVertical b2 = new MobVertical("warriorSk.png", 1, 3,
                 false);
         b2.setPosicao(3, 8);
         addPersonagem(b2);
 
-        BichinhoVaiVemVertical b3 = new BichinhoVaiVemVertical("warriorSk.png", 1, 3,
+        MobVertical b3 = new MobVertical("warriorSk.png", 1, 3,
                 false);
         b3.setPosicao(28, 10);
         addPersonagem(b3);
 
-        BichinhoVaiVemVertical b4 = new BichinhoVaiVemVertical("warriorSk.png", 1, 3,
+        MobVertical b4 = new MobVertical("warriorSk.png", 1, 3,
                 true);
         b4.setPosicao(29, 7);
         addPersonagem(b4);
 
-        BichinhoVaiVemVertical b5 = new BichinhoVaiVemVertical("warriorSk.png", 1, 3,
+        MobVertical b5 = new MobVertical("warriorSk.png", 1, 3,
                 false);
         b5.setPosicao(29, 2);
         addPersonagem(b5);

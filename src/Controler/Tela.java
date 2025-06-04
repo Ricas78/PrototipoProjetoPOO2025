@@ -8,16 +8,10 @@ import Modelo.Fase1;
 import Modelo.Fase2;
 import Modelo.Fase3;
 import Modelo.Personagem;
-import Modelo.Caveira;
 import Modelo.Hero;
-import Modelo.Chaser;
-import Modelo.BichinhoVaiVemHorizontal;
 import Auxiliar.Consts;
 import Auxiliar.Desenho;
-import Modelo.BichinhoVaiVemVertical;
-import Modelo.ZigueZague;
 import Auxiliar.Posicao;
-import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -31,18 +25,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.zip.GZIPInputStream;
-import java.util.zip.GZIPOutputStream;
-import javax.swing.JButton;
 import javax.swing.JFileChooser;
 
-public class Tela extends javax.swing.JFrame implements MouseListener, KeyListener, Serializable {
+public class Tela extends javax.swing.JFrame implements MouseListener, KeyListener {
 
     private Hero hero;
     private ArrayList<Personagem> faseAtual;
