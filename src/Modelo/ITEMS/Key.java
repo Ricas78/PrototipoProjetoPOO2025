@@ -1,25 +1,22 @@
-package Modelo;
+package Modelo.ITEMS;
 
+import Auxiliar.Consts;
 import Auxiliar.Desenho;
 import Controler.Tela;
-import Auxiliar.Consts;
+import Modelo.Hero;
+import Modelo.Personagem;
 
-public class Key extends Personagem {
+public class Key extends Item {
 
     public Key(String sNomeImagePNG) {
         super(sNomeImagePNG);
     }
 
-    @Override
     public void autoDesenho() {
         super.autoDesenho();
-        if (this.validaPosicao()) {
-            Desenho.acessoATelaDoJogo().removePersonagem(this);
-        }
     }
 
-    private boolean validaPosicao() {
-
+    public boolean validaPosicao() {
         Tela tela = Desenho.acessoATelaDoJogo();
 
         // Verifica colisão com o heroi
@@ -33,7 +30,7 @@ public class Key extends Personagem {
         return false;
     }
 
-    private boolean ganhaChave(Hero h) {
+    public boolean ganhaChave(Hero h) {
         if (h.getChave() < Consts.MAX_KEYS) {
             h.setChave(h.getChave() + 1);
             System.out.println("Você tem: " + h.getChave() + " chaves");

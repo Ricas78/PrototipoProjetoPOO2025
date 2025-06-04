@@ -1,9 +1,13 @@
-package Modelo;
+package Modelo.FASES;
+
+import Modelo.Hero;
+import Modelo.ITEMS.*;
+import Modelo.MOBS.*;
 
 public class Fase1 extends Fase {
 
         @Override
-        protected void criarFase() {
+        public void criarFase() {
 
                 wallpaper = "grassGROUND.png";
 
@@ -55,100 +59,84 @@ public class Fase1 extends Fase {
                 k5.setPosicao(25, 13);
                 addPersonagem(k5);
 
-                MobVertical b1 = new MobVertical("warriorSk.png", 1, 3,
+                MobV b1 = new MobV("warriorSk.png", 1, 3,
                                 true);
                 b1.setPosicao(0, 7);
                 addPersonagem(b1);
 
-                MobVertical b2 = new MobVertical("warriorSk.png", 2, 3,
+                MobV b2 = new MobV("warriorSk.png", 2, 3,
                                 true);
                 b2.setPosicao(5, 6);
                 addPersonagem(b2);
 
-                MobVertical b3 = new MobVertical("warriorSk.png", 2, 2,
+                MobV b3 = new MobV("warriorSk.png", 2, 2,
                                 true);
                 b3.setPosicao(5, 10);
                 addPersonagem(b3);
 
-                MobVertical b4 = new MobVertical("warriorSk.png", 2, 2,
+                MobV b4 = new MobV("warriorSk.png", 2, 2,
                                 false);
                 b4.setPosicao(3, 3);
                 addPersonagem(b4);
 
-                MobVertical b5 = new MobVertical("warriorSk.png", 1, 2,
+                MobV b5 = new MobV("warriorSk.png", 1, 2,
                                 false);
                 b5.setPosicao(22, 9);
                 addPersonagem(b5);
 
-                MobVertical b6 = new MobVertical("warriorSk.png", 1, 2,
+                MobV b6 = new MobV("warriorSk.png", 1, 2,
                                 false);
                 b6.setPosicao(22, 7);
                 addPersonagem(b6);
 
-                MobVertical b7 = new MobVertical("warriorSk.png", 1, 2,
+                MobV b7 = new MobV("warriorSk.png", 1, 2,
                                 true);
                 b7.setPosicao(23, 5);
                 addPersonagem(b7);
 
-                MobVertical b8 = new MobVertical("warriorSk.png", 1, 2,
+                MobV b8 = new MobV("warriorSk.png", 1, 2,
                                 true);
                 b8.setPosicao(26, 11);
                 addPersonagem(b8);
 
-                MobHorizontal bh1 = new MobHorizontal("slime.png", 1, 2,
+                MobH bh1 = new MobH("slime.png", 1, 2,
                                 true);
                 bh1.setPosicao(9, 0);
                 addPersonagem(bh1);
 
-                MobHorizontal bh2 = new MobHorizontal("slime.png", 1, 2,
+                MobH bh2 = new MobH("slime.png", 1, 2,
                                 true);
                 bh2.setPosicao(15, 1);
                 addPersonagem(bh2);
 
-                MobHorizontal bh3 = new MobHorizontal("slime.png", 1, 2,
+                MobH bh3 = new MobH("slime.png", 1, 2,
                                 false);
                 bh3.setPosicao(18, 3);
                 addPersonagem(bh3);
 
-                MobHorizontal bh4 = new MobHorizontal("slime.png", 1, 2,
+                MobH bh4 = new MobH("slime.png", 1, 2,
                                 false);
                 bh4.setPosicao(12, 3);
                 addPersonagem(bh4);
 
-                MobHorizontal bh5 = new MobHorizontal("slime.png", 1, 2,
+                MobH bh5 = new MobH("slime.png", 1, 2,
                                 false);
                 bh5.setPosicao(15, 6);
                 addPersonagem(bh5);
 
-                MobHorizontal bh6 = new MobHorizontal("slime.png", 2, 2,
+                MobH bh6 = new MobH("slime.png", 2, 2,
                                 false);
                 bh6.setPosicao(11, 12);
                 addPersonagem(bh6);
 
-                MobHorizontal bh7 = new MobHorizontal("slime.png", 2, 1,
+                MobH bh7 = new MobH("slime.png", 2, 1,
                                 false);
                 bh7.setPosicao(13, 12);
                 addPersonagem(bh7);
 
-                MobHorizontal bh8 = new MobHorizontal("slime.png", 2, 2,
+                MobH bh8 = new MobH("slime.png", 2, 2,
                                 true);
                 bh8.setPosicao(15, 14);
                 addPersonagem(bh8);
-
-                // BichinhoVaiVemVertical bv1 = new BichinhoVaiVemVertical("warriorSk.png", 1);
-                // bv1.setPosicao(5, 6);
-                // addPersonagem(bv1);
-
-                // BichinhoVaiVemVertical bv2 = new BichinhoVaiVemVertical("warriorSk.png", 1);
-                // bv2.setPosicao(4, 10);
-                // addPersonagem(bv2);
-
-                // Caveira caveira = new Caveira("WizzardSk.png");
-                // caveira.setPosicao(0, 1);
-                // addPersonagem(caveira);
-
-                // Chaser chaser = new Chaser("ChaserBear.png");
-                // chaser.setPosicao(12, 12);
-                // addPersonagem(chaser);
         }
 }

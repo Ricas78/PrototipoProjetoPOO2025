@@ -1,7 +1,5 @@
 package Modelo;
 
-import Auxiliar.Desenho;
-
 public class Wall extends Personagem {
 
     public Wall(String sNomeImagePNG) {

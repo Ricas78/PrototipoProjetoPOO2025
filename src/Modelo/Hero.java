@@ -2,6 +2,7 @@ package Modelo;
 
 import Auxiliar.Desenho;
 import Controler.Tela;
+import Modelo.ITEMS.Item;
 
 public class Hero extends Personagem {
 
@@ -45,7 +46,8 @@ public class Hero extends Personagem {
         // Verifica colisão com outros personagens
         for (Personagem p : tela.getFaseAtual()) {
             // com mobs
-            if (p != this && !(p instanceof Heart) && !(p instanceof Key) && p.getPosicao().igual(this.getPosicao())) {
+            if (p != this && !(p instanceof Item)
+                    && p.getPosicao().igual(this.getPosicao())) {
                 this.perdeVida(); // perde vida
 
                 return false;

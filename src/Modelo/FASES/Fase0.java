@@ -1,8 +1,12 @@
-package Modelo;
+package Modelo.FASES;
+
+import Modelo.Hero;
+import Modelo.MOBS.*;
+import Modelo.ITEMS.*;
 
 public class Fase0 extends Fase {
         @Override
-        protected void criarFase() {
+        public void criarFase() {
 
                 wallpaper = "grassGROUND.png";
 
@@ -54,59 +58,55 @@ public class Fase0 extends Fase {
                 h3.setPosicao(29, 1);
                 addPersonagem(h3);
 
-                MobHorizontal b1 = new MobHorizontal("slime.png", 7, 3,
+                MobH b1 = new MobH("slime.png", 7, 3,
                                 false);
                 b1.setPosicao(4, 0);
                 addPersonagem(b1);
 
-                MobHorizontal b2 = new MobHorizontal("slime.png", 3, 2,
+                MobH b2 = new MobH("slime.png", 3, 2,
                                 true);
                 b2.setPosicao(6, 7);
                 addPersonagem(b2);
 
-                MobHorizontal b3 = new MobHorizontal("slime.png", 3, 2,
+                MobH b3 = new MobH("slime.png", 3, 2,
                                 false);
                 b3.setPosicao(2, 12);
                 addPersonagem(b3);
 
-                MobHorizontal b4 = new MobHorizontal("slime.png", 3, 2,
+                MobH b4 = new MobH("slime.png", 3, 2,
                                 true);
                 b4.setPosicao(4, 15);
                 addPersonagem(b4);
 
-                MobHorizontal b5 = new MobHorizontal("slime.png", 7, 2,
+                MobH b5 = new MobH("slime.png", 7, 2,
                                 false);
                 b5.setPosicao(8, 8);
                 addPersonagem(b5);
 
-                MobHorizontal b6 = new MobHorizontal("slime.png", 5, 1,
+                MobH b6 = new MobH("slime.png", 5, 1,
                                 false);
                 b6.setPosicao(10, 10);
                 addPersonagem(b6);
 
-                MobHorizontal b7 = new MobHorizontal("slime.png", 9, 1,
+                MobH b7 = new MobH("slime.png", 9, 1,
                                 false);
                 b7.setPosicao(13, 3);
                 addPersonagem(b7);
 
-                MobHorizontal b8 = new MobHorizontal("slime.png", 9, 1,
+                MobH b8 = new MobH("slime.png", 9, 1,
                                 true);
                 b8.setPosicao(16, 12);
                 addPersonagem(b8);
 
-                MobHorizontal b9 = new MobHorizontal("slime.png", 5, 1,
+                MobH b9 = new MobH("slime.png", 5, 1,
                                 false);
                 b9.setPosicao(20, 3);
                 addPersonagem(b9);
 
-                MobHorizontal b10 = new MobHorizontal("slime.png", 5,
+                MobH b10 = new MobH("slime.png", 5,
                                 1,
                                 true);
                 b10.setPosicao(21, 12);
                 addPersonagem(b10);
-
-                // Chaser chaser = new Chaser("ChaserBear.png", 4);
-                // chaser.setPosicao(0, 0);
-                // addPersonagem(chaser);
         }
 }

@@ -1,7 +1,11 @@
-package Modelo;
+package Modelo.FASES;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+
+import Modelo.Hero;
+import Modelo.Personagem;
+import Modelo.Wall;
 
 public abstract class Fase implements Serializable {
     protected ArrayList<Personagem> personagens;
@@ -13,7 +17,7 @@ public abstract class Fase implements Serializable {
         criarFase(); // cada subclasse implementa isso
     }
 
-    protected abstract void criarFase();
+    public abstract void criarFase();
 
     public ArrayList<Personagem> getPersonagens() {
         return personagens;

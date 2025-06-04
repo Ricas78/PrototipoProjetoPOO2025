@@ -1,8 +1,12 @@
-package Modelo;
+package Modelo.FASES;
+
+import Modelo.Hero;
+import Modelo.ITEMS.*;
+import Modelo.MOBS.*;
 
 public class Fase3 extends Fase {
 
-        protected void criarFase() {
+        public void criarFase() {
 
                 wallpaper = "dungeon.png";
 
@@ -54,64 +58,64 @@ public class Fase3 extends Fase {
                 h3.setPosicao(25, 2);
                 addPersonagem(h3);
 
-                ZigueZague z = new ZigueZague("WizzardSk.png", 3, 3);
+                Wizzard z = new Wizzard("WizzardSk.png", 3, 3);
                 z.setPosicao(4, 5);
                 addPersonagem(z);
 
-                ZigueZague z2 = new ZigueZague("WizzardSk.png", 3, 3);
+                Wizzard z2 = new Wizzard("WizzardSk.png", 3, 3);
                 z2.setPosicao(8, 11);
                 addPersonagem(z2);
 
-                ZigueZague z3 = new ZigueZague("WizzardSk.png", 1, 3);
+                Wizzard z3 = new Wizzard("WizzardSk.png", 1, 3);
                 z3.setPosicao(23, 1);
                 addPersonagem(z3);
 
-                ArrowSK a1 = new ArrowSK("arrow.png", 0, 10,
+                Arrow a1 = new Arrow("arrow.png", 0, 10,
                                 true, true);
                 a1.setPosicao(23, 13);
                 addPersonagem(a1);
 
-                ArrowSK a2 = new ArrowSK("arrow.png", 1, 10,
+                Arrow a2 = new Arrow("arrow.png", 1, 10,
                                 true, true);
                 a2.setPosicao(20, 0);
                 addPersonagem(a2);
 
-                ArrowSK a3 = new ArrowSK("arrow.png", 0, 10,
+                Arrow a3 = new Arrow("arrow.png", 0, 10,
                                 true, true);
                 a3.setPosicao(20, 7);
                 addPersonagem(a3);
 
-                MobVertical b1 = new MobVertical("warriorSk.png", 1, 3,
+                MobV b1 = new MobV("warriorSk.png", 1, 3,
                                 false);
                 b1.setPosicao(22, 7);
                 addPersonagem(b1);
 
-                MobVertical b2 = new MobVertical("warriorSk.png", 1, 3,
+                MobV b2 = new MobV("warriorSk.png", 1, 3,
                                 true);
                 b2.setPosicao(23, 9);
                 addPersonagem(b2);
 
-                MobVertical b3 = new MobVertical("warriorSk.png", 1, 3,
+                MobV b3 = new MobV("warriorSk.png", 1, 3,
                                 true);
                 b3.setPosicao(26, 4);
                 addPersonagem(b3);
 
-                MobVertical b4 = new MobVertical("warriorSk.png", 1, 3,
+                MobV b4 = new MobV("warriorSk.png", 1, 3,
                                 false);
                 b4.setPosicao(25, 6);
                 addPersonagem(b4);
 
-                MobVertical b5 = new MobVertical("warriorSk.png", 1, 5,
+                MobV b5 = new MobV("warriorSk.png", 1, 5,
                                 false);
                 b5.setPosicao(28, 2);
                 addPersonagem(b5);
 
-                MobVertical b6 = new MobVertical("warriorSk.png", 1, 4,
+                MobV b6 = new MobV("warriorSk.png", 1, 4,
                                 true);
                 b6.setPosicao(29, 3);
                 addPersonagem(b6);
 
-                MobVertical b7 = new MobVertical("warriorSk.png", 1, 5,
+                MobV b7 = new MobV("warriorSk.png", 1, 5,
                                 false);
                 b7.setPosicao(28, 4);
                 addPersonagem(b7);

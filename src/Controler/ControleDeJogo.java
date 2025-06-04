@@ -1,6 +1,6 @@
 package Controler;
 
-import Modelo.Chaser;
+import Modelo.MOBS.Hunter;
 import Modelo.Personagem;
 import Modelo.Hero;
 import Auxiliar.Posicao;
@@ -30,8 +30,8 @@ public class ControleDeJogo {
         }
         for (int i = 1; i < umaFase.size(); i++) {
             pIesimoPersonagem = umaFase.get(i);
-            if (pIesimoPersonagem instanceof Chaser) {
-                ((Chaser) pIesimoPersonagem).computeDirection(hero.getPosicao());
+            if (pIesimoPersonagem instanceof Hunter) {
+                ((Hunter) pIesimoPersonagem).computeDirection(hero.getPosicao());
             }
         }
     }

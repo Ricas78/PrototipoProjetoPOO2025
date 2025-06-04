@@ -1,23 +1,21 @@
-package Modelo;
+package Modelo.ITEMS;
 
 import Auxiliar.Desenho;
 import Controler.Tela;
+import Modelo.Hero;
+import Modelo.Personagem;
 
-public class Heart extends Personagem {
+public class Heart extends Item {
 
     public Heart(String sNomeImagePNG) {
         super(sNomeImagePNG);
     }
 
-    @Override
     public void autoDesenho() {
         super.autoDesenho();
-        if (this.validaPosicao()) {
-            Desenho.acessoATelaDoJogo().removePersonagem(this);
-        }
     }
 
-    private boolean validaPosicao() {
+    public boolean validaPosicao() {
 
         Tela tela = Desenho.acessoATelaDoJogo();
 
@@ -31,4 +29,5 @@ public class Heart extends Personagem {
         }
         return false;
     }
+
 }

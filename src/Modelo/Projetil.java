@@ -2,15 +2,15 @@ package Modelo;
 
 import Auxiliar.Desenho;
 import Controler.Tela;
-import java.awt.Graphics;
-import java.io.Serializable;
+import Modelo.MOBS.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fogo extends Personagem implements Serializable {
+public class Projetil extends Personagem {
     private int dir;
 
-    public Fogo(String sNomeImagePNG, int dir) {
+    public Projetil(String sNomeImagePNG, int dir) {
         super(sNomeImagePNG);
         this.bMortal = false;
         this.dir = dir;
@@ -69,9 +69,10 @@ public class Fogo extends Personagem implements Serializable {
                 }
             }
 
-            else if ((p instanceof Wall) && p.getPosicao().igual(this.getPosicao())) {
+            else if (((p instanceof Wall) || (p instanceof Mob)) && p.getPosicao().igual(this.getPosicao())) {
                 Desenho.acessoATelaDoJogo().removePersonagem(this);
             }
+
         }
         return true;
     }

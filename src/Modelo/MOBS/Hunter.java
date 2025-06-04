@@ -1,32 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Modelo;
+package Modelo.MOBS;
 
-import Auxiliar.Desenho;
 import Auxiliar.Posicao;
-import Controler.Tela;
 
-/**
- *
- * @author 2373891
- */
-public class Chaser extends Personagem {
+public class Hunter extends Mob {
 
     private boolean iDirectionV;
     private boolean iDirectionH;
-    private int delay;
-    private int contFrames;
 
-    public Chaser(String sNomeImagePNG, int delay) {
-        super(sNomeImagePNG);
+    public Hunter(String sNomeImagePNG, int delay) {
+        super(sNomeImagePNG, delay);
         iDirectionV = true;
         iDirectionH = true;
-        this.delay = delay;
-        contFrames = 0;
 
-        this.bTransponivel = false;
     }
 
     public void computeDirection(Posicao heroPos) {
@@ -67,19 +52,4 @@ public class Chaser extends Personagem {
 
         }
     }
-
-    private boolean validaPosicao() {
-        Tela tela = Desenho.acessoATelaDoJogo();
-
-        for (Personagem p : tela.getFaseAtual()) {
-            if (p instanceof Hero) {
-                if (p.getPosicao().igual(this.getPosicao())) {
-                    ((Hero) p).perdeVida();
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
 }

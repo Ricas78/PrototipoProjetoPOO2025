@@ -1,8 +1,12 @@
-package Modelo;
+package Modelo.FASES;
+
+import Modelo.Hero;
+import Modelo.ITEMS.*;
+import Modelo.MOBS.*;
 
 public class Fase2 extends Fase {
 
-        protected void criarFase() {
+        public void criarFase() {
 
                 wallpaper = "ruins.png";
 
@@ -57,68 +61,64 @@ public class Fase2 extends Fase {
                 h3.setPosicao(26, 1);
                 addPersonagem(h3);
 
-                ArrowSK a1 = new ArrowSK("arrow.png", 2, 5,
+                Arrow a1 = new Arrow("arrow.png", 2, 5,
                                 true, true);
                 a1.setPosicao(13, 6);
                 addPersonagem(a1);
 
-                ArrowSK a2 = new ArrowSK("arrow.png", 1, 8,
+                Arrow a2 = new Arrow("arrow.png", 1, 8,
                                 false, true);
                 a2.setPosicao(10, 2);
                 addPersonagem(a2);
 
-                ArrowSK a3 = new ArrowSK("arrow.png", 2, 5,
+                Arrow a3 = new Arrow("arrow.png", 2, 5,
                                 false, true);
                 a3.setPosicao(13, 9);
                 addPersonagem(a3);
 
-                ArrowSK a4 = new ArrowSK("arrow.png", 3, 7,
+                Arrow a4 = new Arrow("arrow.png", 3, 7,
                                 false, true);
                 a4.setPosicao(8, 12);
                 addPersonagem(a4);
 
-                ArrowSK a5 = new ArrowSK("arrow.png", 2, 7,
+                Arrow a5 = new Arrow("arrow.png", 2, 7,
                                 true, true);
                 a5.setPosicao(25, 10);
                 addPersonagem(a5);
 
-                ArrowSK a6 = new ArrowSK("arrow.png", 2, 7,
+                Arrow a6 = new Arrow("arrow.png", 2, 7,
                                 false, true);
                 a6.setPosicao(25, 5);
                 addPersonagem(a6);
 
-                ArrowSK a7 = new ArrowSK("arrow.png", 4, 4,
+                Arrow a7 = new Arrow("arrow.png", 4, 4,
                                 false, true);
                 a7.setPosicao(23, 0);
                 addPersonagem(a7);
 
-                ArrowSK a8 = new ArrowSK("arrow.png", 4, 4,
+                Arrow a8 = new Arrow("arrow.png", 4, 4,
                                 true, true);
                 a8.setPosicao(23, 15);
                 addPersonagem(a8);
 
-                MobVertical b1 = new MobVertical("warriorSk.png", 2, 3,
+                MobV b1 = new MobV("warriorSk.png", 2, 3,
                                 false);
                 b1.setPosicao(27, 11);
                 addPersonagem(b1);
 
-                MobVertical b2 = new MobVertical("warriorSk.png", 2, 1,
+                MobV b2 = new MobV("warriorSk.png", 2, 1,
                                 true);
                 b2.setPosicao(29, 9);
                 addPersonagem(b2);
 
-                MobVertical b3 = new MobVertical("warriorSk.png", 3, 2,
+                MobV b3 = new MobV("warriorSk.png", 3, 2,
                                 true);
                 b3.setPosicao(3, 5);
                 addPersonagem(b3);
 
-                MobVertical b4 = new MobVertical("warriorSk.png", 3, 2,
+                MobV b4 = new MobV("warriorSk.png", 3, 2,
                                 false);
                 b4.setPosicao(0, 10);
                 addPersonagem(b4);
-
-                // Caveira c = new Caveira(("WizzardSk.png"));
-                // c.setPosicao(17, 10);
-                // addPersonagem(c);
         }
 }

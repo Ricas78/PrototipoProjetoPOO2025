@@ -1,13 +1,8 @@
 package Controler;
 
-import Modelo.Fase4;
 import Auxiliar.Save;
-import Modelo.Fase;
-import Modelo.Fase0;
-import Modelo.Fase1;
-import Modelo.Fase2;
-import Modelo.Fase3;
 import Modelo.Personagem;
+import Modelo.FASES.*;
 import Modelo.Hero;
 import Auxiliar.Consts;
 import Auxiliar.Desenho;
@@ -196,12 +191,14 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
     }
 
     public void mousePressed(MouseEvent e) {
-        int x = e.getX();
-        int y = e.getY();
+        // int x = e.getX();
+        // int y = e.getY();
 
-        this.setTitle("X: " + x + ", Y: " + y + " -> Cell: " + (y / Consts.CELL_SIDE) + ", " + (x / Consts.CELL_SIDE));
-        this.hero.getPosicao().setPosicao(y / Consts.CELL_SIDE, x / Consts.CELL_SIDE);
-        repaint();
+        // this.setTitle("X: " + x + ", Y: " + y + " -> Cell: " + (y / Consts.CELL_SIDE)
+        // + ", " + (x / Consts.CELL_SIDE));
+        // this.hero.getPosicao().setPosicao(y / Consts.CELL_SIDE, x /
+        // Consts.CELL_SIDE);
+        // repaint();
     }
 
     private void initComponents() {

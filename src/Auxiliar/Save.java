@@ -3,7 +3,7 @@ package Auxiliar;
 import java.io.Serializable;
 import java.util.ArrayList;
 import Modelo.Personagem;
-import Modelo.Fase;
+import Modelo.FASES.*;
 
 public class Save implements Serializable {
 
