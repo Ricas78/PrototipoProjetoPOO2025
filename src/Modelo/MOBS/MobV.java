@@ -2,7 +2,7 @@ package Modelo.MOBS;
 
 public class MobV extends Mob {
 
-    private boolean down;
+    protected boolean down;
 
     public MobV(String sNomeImagePNG, int totalPassos, int delay, boolean down) {
         super(sNomeImagePNG, delay);

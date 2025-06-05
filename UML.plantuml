@@ -1,0 +1,282 @@
+@startuml
+
+package Modelo {
+
+    abstract class Personagem {
+        # ImageIcon iImage
+        # Posicao pPosicao
+        # boolean bTransponivel
+        # boolean bMortal
+
+        + Personagem(String sNomeImagePNG)
+        + boolean isbMortal()
+        + Posicao getPosicao()
+        + boolean isbTransponivel()
+        + void setbTransponivel(boolean bTransponivel)
+        + void autoDesenho()
+        + boolean setPosicao(int linha, int coluna)
+        + boolean moveUp()
+        + boolean moveDown()
+        + boolean moveRight()
+        + boolean moveLeft()
+    }
+
+        class Hero extends Personagem {
+        - int chave
+        - int vida
+        - final int VIDA_MAXIMA = 3
+
+        + Hero(String sNomeImagePNG)
+        + void voltaAUltimaPosicao()
+        + boolean setPosicao(int linha, int coluna)
+        + boolean moveUp()
+        + boolean moveDown()
+        + boolean moveRight()
+        + boolean moveLeft()
+        + int getVida()
+        + void setVida(int v)
+        + void perdeVida()
+        + boolean ganhaVida()
+        + void respawn()
+        + void setChave(int c)
+        + int getChave()
+    }
+
+        class Projetil extends Personagem {
+        - int dir
+
+        + Projetil(String sNomeImagePNG, int dir)
+        + void autoDesenho()
+        - boolean validaPosicao()
+    }
+
+        class Wall extends Personagem {
+        + Wall(String sNomeImagePNG)
+        + void autoDesenho()
+    }
+
+    package Modelo.MOBS {
+
+    class Mob extends Modelo.Personagem {
+        # int totalPassos
+        # int passosDados
+        # int delay
+        # int contFrames
+        + Mob(String sNomeImagePNG, int delay)
+        + boolean validaPosicao()
+        + void autoDesenho()
+    }
+
+        class MobH extends Mob {
+        - boolean esquerda
+        + MobH(String sNomeImagePNG, int totalPassos, int delay, boolean esquerda)
+        + void autoDesenho()
+    }
+        class Arrow extends MobH {
+        - int iContaIntervalos
+        - boolean up
+        + Arrow(String sNomeImagePNG, int walk, int delay, boolean esquerda, boolean up)
+        + void autoDesenho()
+    }
+
+    Arrow ..> Projetil : cria instância(COMPOSIÇÃO)
+
+        class MobV extends Mob {
+        # boolean down
+        + MobV(String sNomeImagePNG, int totalPassos, int delay, boolean down)
+        + void autoDesenho()
+    }
+
+        class Wizzard extends Mob {
+        - int position
+        + Wizzard(String sNomeImagePNG, int totalPassos, int delay)
+        + void autoDesenho()
+    }
+
+        class Hunter extends Mob {
+        - boolean iDirectionV
+        - boolean iDirectionH
+        + Hunter(String sNomeImagePNG, int delay)
+        + void computeDirection(Posicao heroPos)
+        + void autoDesenho()
+    }
+    }
+
+    package Modelo.ITEMS {
+
+    abstract class Item extends Modelo.Personagem {
+        + Item(String sNomeImagePNG)
+        + void autoDesenho()
+        + abstract boolean validaPosicao()
+    }
+
+    class Heart extends Item {
+        + Heart(String sNomeImagePNG)
+        + void autoDesenho()
+        + boolean validaPosicao()
+    }
+
+     class Key extends Item {
+        + Key(String sNomeImagePNG)
+        + void autoDesenho()
+        + boolean validaPosicao()
+        + boolean ganhaChave(Hero h)
+    }
+    }
+    package Modelo.FASES {
+
+    abstract class Fase {
+        # ArrayList<Personagem> personagens
+        # Hero hero
+        # String wallpaper
+
+        + Fase()
+        + abstract void criarFase()
+        + ArrayList<Personagem> getPersonagens()
+        + Hero getHero()
+        + String getWallpaper()
+        + void wallHori(int l, int ci, int cf, String im)
+        + void wallVert(int li, int lf, int c, String im)
+    }
+
+        class Fase0 extends Fase {
+        + void criarFase()
+    }
+
+    class Fase1 extends Fase {
+        + void criarFase()
+    }
+
+    class Fase2 extends Fase {
+        + void criarFase()
+    }
+
+    class Fase3 extends Fase {
+        + void criarFase()
+    }
+
+    class Fase4 extends Fase {
+        + void criarFase()
+    }
+
+}
+}
+
+package Auxiliar {
+    class Consts {
+    {static} + int CELL_SIDE = 50
+    {static} + int RES = 16
+    {static} + int MUNDO_LARGURA = 16
+    {static} + int MUNDO_ALTURA = 30
+    {static} + int PERIOD = 200
+    {static} + String PATH = File.separator + "imgs" + File.separator
+    {static} + int TIMER = 10
+    {static} + int MAX_KEYS = 5
+}
+
+class CriaPersonagem {
+    +main(String[] args)
+}
+
+CriaPersonagem ..> Arrow : usa
+CriaPersonagem ..> MobV : usa
+CriaPersonagem ..> MobH : usa
+CriaPersonagem ..> Wizzard : usa
+CriaPersonagem ..> Hunter : usa
+
+class Desenho  {
+         static Tela jCenario
+        + static void setCenario(Tela umJCenario)
+        + static Tela acessoATelaDoJogo()
+        + static Graphics getGraphicsDaTela()
+        + static void desenhar(ImageIcon iImage, int iColuna, int iLinha)
+}
+interface Serializable
+Desenho ..|> Serializable
+Desenho ..> Consts : usa
+
+class Posicao  {
+        - int linha
+        - int coluna
+        - int linhaAnterior
+        - int colunaAnterior
+
+        + Posicao(int linha, int coluna)
+        + boolean setPosicao(int linha, int coluna)
+        + int getLinha()
+        + boolean volta()
+        + int getColuna()
+        + boolean igual(Posicao posicao)
+        + boolean copia(Posicao posicao)
+        + boolean moveUp()
+        + boolean moveDown()
+        + boolean moveRight()
+        + boolean moveLeft()
+    }
+
+    Posicao ..|> Serializable
+    Posicao ..> Consts : usa
+
+     class Save {
+        + int numeroDaFaseAtual
+        + Fase fase
+        + ArrayList<Personagem> faseAtual
+
+        + Save(int numFase, Fase fase, ArrayList<Personagem> personagens)
+    }
+
+    Save ..|> Serializable
+}
+
+package Controler {
+    class Tela {
+        - Hero hero
+        - ArrayList<Personagem> faseAtual
+        - ControleDeJogo cj
+        - Fase fase
+        - int numeroDaFaseAtual
+
+        + Tela()
+        + void go()
+        + void keyPressed(KeyEvent)
+        + void trocarDeFase()
+        + void salvarJogo()
+        + void carregarJogo()
+        + ArrayList<Personagem> getFaseAtual()
+        + Graphics getGraphicsBuffer()
+    }
+
+    interface KeyListener
+    interface MouseListener
+
+    Tela ..|> KeyListener
+    Tela ..|> MouseListener
+
+
+
+Tela --> Hero : contém
+Tela --> Fase : usa
+Tela --> Fase0 : instancia
+Tela --> Fase1 : instancia
+Tela --> Fase2 : instancia
+Tela --> Fase3 : instancia
+Tela --> Fase4 : instancia
+Tela --> Personagem : manipula lista
+Tela --> Save : para salvar/carregar
+Tela --> ControleDeJogo : usa
+Tela --> Desenho : define cenário
+Tela --> Auxiliar.Consts : usa
+Tela --> Posicao : verificação de posição
+
+class ControleDeJogo {
+    + void desenhaTudo(ArrayList<Personagem>)
+    + void processaTudo(ArrayList<Personagem>)
+    + boolean ehPosicaoValida(ArrayList<Personagem>, Posicao)
+}
+ControleDeJogo --> Personagem : usa
+ControleDeJogo --> Hero : usa 
+ControleDeJogo --> Hunter : usa como cast
+ControleDeJogo --> Posicao : usa nos métodos
+}
+
+@enduml

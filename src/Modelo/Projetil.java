@@ -52,7 +52,7 @@ public class Projetil extends Personagem {
 
     }
 
-    private boolean validaPosicao() {
+    public boolean validaPosicao() {
 
         Tela tela = Desenho.acessoATelaDoJogo();
 
