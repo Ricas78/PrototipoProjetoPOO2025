@@ -1,9 +1,13 @@
 package Modelo.MOBS;
 
+//mob que se movimenta verticalmente
 public class MobV extends Mob {
 
     protected boolean down;
 
+    // é passado o nome do arquivo de skin do mob, o quanto ele deve percorrer do
+    // mapa, o seu delay de frames de movimentação e se ele deve se movimentar de
+    // baixo-cima ou cima-baixo
     public MobV(String sNomeImagePNG, int totalPassos, int delay, boolean down) {
         super(sNomeImagePNG, delay);
         this.totalPassos = totalPassos;

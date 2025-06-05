@@ -35,6 +35,10 @@ public abstract class Fase implements Serializable {
         personagens.add(p);
     }
 
+    // função que auxilia na geração de estruturas(muros) em linha horizontal na
+    // fase, é
+    // passada a linha de interesse e a coluna inicial e final que deve conter a
+    // estrutura
     public void wallHori(int l, int ci, int cf, String im) {
 
         Wall[] a = new Wall[cf - ci + 1];
@@ -46,6 +50,7 @@ public abstract class Fase implements Serializable {
         }
     }
 
+    // mesma coisa só que para estruturas geradas verticalmente no mapa
     public void wallVert(int li, int lf, int c, String im) {
 
         Wall[] a = new Wall[lf - li + 1];

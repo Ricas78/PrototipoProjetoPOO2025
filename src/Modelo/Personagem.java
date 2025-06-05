@@ -14,8 +14,8 @@ public abstract class Personagem implements Serializable {
 
     protected ImageIcon iImage;
     protected Posicao pPosicao;
-    protected boolean bTransponivel; /* Pode passar por cima? */
-    protected boolean bMortal; /* Se encostar, morre? */
+    protected boolean bTransponivel;
+    protected boolean bMortal;
 
     public boolean isbMortal() {
         return bMortal;
@@ -38,10 +38,7 @@ public abstract class Personagem implements Serializable {
     }
 
     public Posicao getPosicao() {
-        /*
-         * TODO: Retirar este método para que objetos externos nao possam operar
-         * diretamente sobre a posição do Personagem
-         */
+
         return pPosicao;
     }
 

@@ -1,9 +1,13 @@
 package Modelo.MOBS;
 
+//mob que se movimenta horizontalmente
 public class MobH extends Mob {
 
     protected boolean esquerda;
 
+    // é passado o nome do arquivo de skin do mob, o quanto ele deve percorrer do
+    // mapa, o seu delay de frames de movimentação e se ele deve se movimentar da
+    // direita-esquerda ou esquerda-direita
     public MobH(String sNomeImagePNG, int totalPassos, int delay, boolean esquerda) {
         super(sNomeImagePNG, delay);
         this.totalPassos = totalPassos;

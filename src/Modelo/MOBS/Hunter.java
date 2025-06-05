@@ -2,11 +2,14 @@ package Modelo.MOBS;
 
 import Auxiliar.Posicao;
 
+//Mob que persegue o personagem e se colidir com ele dá dano
 public class Hunter extends Mob {
 
     private boolean iDirectionV;
     private boolean iDirectionH;
 
+    // é passado o nome do arquivo de skin do mob, e o valor de delay de
+    // movimentação
     public Hunter(String sNomeImagePNG, int delay) {
         super(sNomeImagePNG, delay);
         iDirectionV = true;

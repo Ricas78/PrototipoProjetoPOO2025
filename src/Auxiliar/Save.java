@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import Modelo.Personagem;
 import Modelo.FASES.*;
 
+//Classe para armazenar os dados relevantes em um save
 public class Save implements Serializable {
 
     public int numeroDaFaseAtual;

@@ -5,6 +5,7 @@ import Controler.Tela;
 import Modelo.Hero;
 import Modelo.Personagem;
 
+//classe do item de vida do jogo
 public class Heart extends Item {
 
     public Heart(String sNomeImagePNG) {
@@ -19,7 +20,7 @@ public class Heart extends Item {
 
         Tela tela = Desenho.acessoATelaDoJogo();
 
-        // Verifica colisão com o heroi
+        // Verifica colisão com o heroi, se sim, ele ganha vida
         for (Personagem p : tela.getFaseAtual()) {
             if (p instanceof Hero) {
                 if (p.getPosicao().igual(this.getPosicao())) {

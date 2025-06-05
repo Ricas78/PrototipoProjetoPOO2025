@@ -9,12 +9,15 @@ public class Fase1 extends Fase {
         @Override
         public void criarFase() {
 
+                // definindo o plano de fundo do mapa
                 wallpaper = "grassGROUND.png";
 
+                // adicionando o heroi no mapa
                 hero = new Hero("MainHero.png");
                 hero.setPosicao(0, 1);
                 addPersonagem(hero);
 
+                // geração de estruturas no mapa
                 wallHori(2, 0, 13, "arbustoWALL.png");
                 wallHori(6, 2, 15, "arbustoWALL.png");
                 wallHori(21, 0, 11, "arbustoWALL.png");
@@ -27,6 +30,7 @@ public class Fase1 extends Fase {
                 wallVert(8, 20, 11, "arbustoWALL.png");
                 wallVert(7, 23, 15, "arbustoWALL.png");
 
+                // Adicionando os itens(chaves e vidas) no mapa
                 Heart h1 = new Heart("heart.png");
                 h1.setPosicao(1, 14);
                 addPersonagem(h1);
@@ -59,6 +63,7 @@ public class Fase1 extends Fase {
                 k5.setPosicao(25, 13);
                 addPersonagem(k5);
 
+                // Adicionando os Mobs no mapa
                 MobV b1 = new MobV("warriorSk.png", 1, 3,
                                 true);
                 b1.setPosicao(0, 7);

@@ -3,10 +3,14 @@ package Modelo.MOBS;
 import Auxiliar.Desenho;
 import Modelo.Projetil;
 
+//mob que se teleporta ao longo de uma região delimitada do mapa e solta projeteis
 public class Wizzard extends Mob {
 
     private int position;
 
+    // é passado o nome do arquivo de skin do mob, a distância que ele deve
+    // teleportar do seu ponto de posicionamento inicial e o seu delay de frames de
+    // movimentação
     public Wizzard(String sNomeImagePNG, int totalPassos, int delay) {
         super(sNomeImagePNG, delay);
         this.totalPassos = totalPassos;

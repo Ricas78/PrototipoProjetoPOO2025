@@ -3,11 +3,16 @@ package Modelo.MOBS;
 import Auxiliar.Desenho;
 import Modelo.Projetil;
 
+//mob que dispara projeteis verticalmente e anda horizontalmente
 public class Arrow extends MobH {
 
     private int iContaIntervalos;
     private boolean up;
 
+    // é passado o nome do arquivo de skin do mob, o quanto ele deve percorrer do
+    // mapa, o seu delay de frames de movimentação, se ele deve se movimentar da
+    // direita-esquerda ou esquerda-direita e se o projetil deve ser pra cima ou pra
+    // baixo
     public Arrow(String sNomeImagePNG, int walk, int delay, boolean esquerda, boolean up) {
         super(sNomeImagePNG, walk, delay, esquerda);
         this.up = up;

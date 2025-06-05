@@ -218,6 +218,7 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
         pack();
     }
 
+    // função, com tratamento de erro, para salvar o jogo atual
     private void salvarJogo() {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("savegame.dat"))) {
             Save estado = new Save(numeroDaFaseAtual, fase, faseAtual);
@@ -230,6 +231,8 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
         }
     }
 
+    // carrega o último jogo salvo, independente da fase que tiver, os itens pegos
+    // são mantidos tambem
     private void carregarJogo() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("savegame.dat"))) {
             Save estado = (Save) ois.readObject();
@@ -250,6 +253,9 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
     public void mouseClicked(MouseEvent e) {
     }
 
+    // Função que possibilita colocar qualquer personagem do tipo Mob dentro e
+    // qualquer mapa em qualquer posição, bastando clicar na posição desejada na
+    // tela
     @Override
     public void mouseReleased(MouseEvent e) {
         // Abre seletor de arquivo

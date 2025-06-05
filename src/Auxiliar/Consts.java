@@ -10,5 +10,5 @@ public class Consts {
     public static final int PERIOD = 200; // periodo de atualização de frames
     public static final String PATH = File.separator + "imgs" + File.separator;
     public static final int TIMER = 10;
-    public static final int MAX_KEYS = 5;
+    public static final int MAX_KEYS = 5; // max de chaves pra concluir uma fase
 }

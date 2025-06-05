@@ -7,6 +7,7 @@ import Modelo.MOBS.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//classe de Objetos criados/lançados por outros personagens
 public class Projetil extends Personagem {
     private int dir;
 
@@ -19,6 +20,7 @@ public class Projetil extends Personagem {
     @Override
     public void autoDesenho() {
         super.autoDesenho();
+        // escolhe a direção do projetil
         switch (dir) {
             case 0:
                 if (!this.moveUp()) {
@@ -47,7 +49,7 @@ public class Projetil extends Personagem {
                 }
                 break;
         }
-
+        // verifica a colisão
         validaPosicao();
 
     }
@@ -58,7 +60,7 @@ public class Projetil extends Personagem {
 
         List<Personagem> personagens = new ArrayList<>(tela.getFaseAtual());
 
-        // Verifica colisão com outros personagens
+        // Verifica colisão com outros personagens, se for o heroi, ele perde vida
         for (Personagem p : personagens) {
             if (p instanceof Hero) {
                 if (p.getPosicao().igual(this.getPosicao())) {
@@ -68,7 +70,7 @@ public class Projetil extends Personagem {
                     return false;
                 }
             }
-
+            // verifica colisão com estruturas ou mobs, se colidir, o projetil desaparece
             else if (((p instanceof Wall) || (p instanceof Mob)) && p.getPosicao().igual(this.getPosicao())) {
                 Desenho.acessoATelaDoJogo().removePersonagem(this);
             }

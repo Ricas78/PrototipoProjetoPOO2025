@@ -4,6 +4,7 @@ import Auxiliar.Desenho;
 import Controler.Tela;
 import Modelo.ITEMS.Item;
 
+//classe do heroi que tem certa quantidade de vidas e de chaves coletadas
 public class Hero extends Personagem {
 
     private int chave;
@@ -31,9 +32,6 @@ public class Hero extends Personagem {
         return false;
     }
 
-    /*
-     * TO-DO: este metodo pode ser interessante a todos os personagens que se movem
-     */
     private boolean validaPosicao() {
 
         Tela tela = Desenho.acessoATelaDoJogo();

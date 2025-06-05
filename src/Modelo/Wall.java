@@ -1,5 +1,6 @@
 package Modelo;
 
+//classe que gera uma estrutura intransponivel para o heroi, alguns mobs e projeteis
 public class Wall extends Personagem {
 
     public Wall(String sNomeImagePNG) {

@@ -5,6 +5,7 @@ import java.util.zip.GZIPOutputStream;
 import Modelo.MOBS.*;
 import Modelo.Personagem;;
 
+//Classe que cria um Objeto de cada mob do jogo em um zip pra ser colocado em qualquer posição de cada mapa
 public class CriaPersonagem {
     public static void main(String[] args) throws Exception {
         Personagem p = new Arrow("arrow.png", 0, 1, true, true);

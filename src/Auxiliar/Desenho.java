@@ -4,7 +4,6 @@ import java.awt.Graphics;
 import java.io.Serializable;
 import javax.swing.ImageIcon;
 import Controler.Tela;
-//import Controler.Tela;
 
 public class Desenho implements Serializable {
 
